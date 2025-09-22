@@ -58,7 +58,7 @@ ternfs-client-tests: revision.c extra-files
 # Targets to build/clean the kmod when packaging it up (e.g. via dkms)
 # We'll generate revision.c separatedly, and we also don't want
 # sparse as a dependency.
-ternfs-client:
+ternfs-client: extra-files
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
 
 ternfs-client-clean:
